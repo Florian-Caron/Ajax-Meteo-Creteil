@@ -1,0 +1,117 @@
+body {
+	text-align: center;
+	font-family: Verdana;
+	font-size: 1em;
+	background-color: #aaffee;
+	background-image: url("img/background3.svg");
+	background-size: 100%;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	animation-duration: 2s;
+	animation-name: slidein;
+	overflow: hidden;
+}
+
+@keyframes slidein {
+	from {
+		margin-top: 100%;
+	}
+
+	to {
+		margin-bot: 0%;
+		width: 100%;
+	}
+}
+
+header {
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+button {
+	font-weight: bold;
+	padding: 1em;
+	background-color: #aaffee;
+	border: #6ea12c 2px solid;
+	border-radius: 5px;
+}
+
+main{
+	position: relative;
+	z-index: 2;
+	height: 80vh;
+	overflow-x: auto;
+	width: 70vw;
+	max-width: 60em;
+	margin: auto;
+	scrollbar-width: thin;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	animation-duration: 3s;
+	animation-name: table;
+	border-color: #6ea12c;
+}
+
+@keyframes table {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+tr {
+	background-color: rgba(250, 250, 250,0.8);
+}
+tr:nth-child(even){background-color: rgba(231, 231, 231,0.8);
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+tr :first-of-type {
+	border-radius: 5px 0 0 0;
+}
+
+tr :last-of-type {
+	border-radius: 0 5px 0 0;
+}
+
+.soleil {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	max-width: 15em;
+	animation: ease-out, linear;
+	animation-name: soleil, rotation;
+	animation-iteration-count: 1, infinite;
+	animation-duration: 8s, 20s;
+	animation-play-state: running;
+}
+
+@keyframes soleil {
+	from {
+		right: -20em;
+		top: 20em;
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(360deg);
+	}
+}
